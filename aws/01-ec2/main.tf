@@ -23,6 +23,6 @@ resource "aws_instance" "web" {
                 EOF
 
   tags = {
-    Name = "test"
+    Name = "test-instance"
   }
 }
