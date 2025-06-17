@@ -14,9 +14,15 @@ provider "aws" {
 
 resource "aws_instance" "web" {
   ami           = "ami-09e6f87a47903347c"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
+
+  user_data = <<-EOF
+                #!/bin/bash
+                sudo yum update -y
+                sudo yum install nginx -y
+                EOF
 
   tags = {
-    Name = "anitha"
+    Name = "test"
   }
 }
