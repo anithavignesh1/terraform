@@ -1,4 +1,4 @@
-# terraform
+# terraform for cloud
 terraform
 
 ### To set aws authentication
